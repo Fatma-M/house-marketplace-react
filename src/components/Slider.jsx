@@ -50,7 +50,7 @@ function Slider() {
           <SwiperSlide
             key={id}
             onClick={() => navigate(`/category/${data.type}/${id}`)}>
-            <div>
+            <div className="swiperSlideDiv">
               <img
                 src={data.imgUrls[0]}
                 alt=""

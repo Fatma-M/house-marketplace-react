@@ -13,7 +13,7 @@ import { v4 as uuidv4 } from "uuid";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
 
-function CreateListings() {
+function CreateListing() {
   // eslint-disable-next-line no-unused-vars
   const [geolocationEnabled, setGeolocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -66,7 +66,8 @@ function CreateListings() {
     return () => {
       isMounted.current = false;
     };
-  }, [auth, formData, isMounted, navigate]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const onMutate = (event) => {
     // BOOLEANS
@@ -414,4 +415,4 @@ function CreateListings() {
   );
 }
 
-export default CreateListings;
+export default CreateListing;
